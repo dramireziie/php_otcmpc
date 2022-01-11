@@ -4,7 +4,7 @@ header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Conte
 header("Content-Type: text/html; charset=utf-8");
 require_once('connect.php');
 $method = $_SERVER['REQUEST_METHOD'];
-
+echo "algo";
 function conectarDB(){
 
   $servidor = "127.0.0.1:1234";
