@@ -1,0 +1,21 @@
+runtime: php74
+
+runtime_config:
+    document_root:
+    
+handlers: 
+- url: /(.+\.(gif|png|jpg|css|js|map|PNG))$
+  static_files: \1
+  upload: .+\.(gif|png|jpg|css|js|map|PNG)$
+  
+- url: /.*
+  script: auto
+
+entrypoint:
+    server handler.php
+    
+env_variables:
+    CLOUDSQL_USER: root
+    CLOUDSQL_DB: ot_cmpc
+    CLOUDSQL_PASSWORD: 031203
+    CLOUDSQL_DNS: /cloudsql/rich-jigsaw-337512:us-central1:root2
