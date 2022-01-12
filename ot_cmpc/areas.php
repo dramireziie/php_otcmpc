@@ -6,7 +6,7 @@
 	}
 	$sql = "Select * from area";
 	$result = mysqli_query($conn,$sql);
-	
+	echo $result;
 	$rows = array();
 	while($r = mysqli_fetch_array($result)) {
 		$rows[] = $r;
