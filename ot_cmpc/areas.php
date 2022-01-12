@@ -13,7 +13,7 @@
 
 				); 
 		//assign each sub-array to the newly created array
-		
+		json_encode(array('idArea' => 1, 'nombreArea'=>2));
 	} 
 	echo json_encode($arr);
 	
