@@ -5,6 +5,8 @@
 	  die("Connection failed: " . $conn->connect_error);
 	}
 	$sql = "Select * from area";
+	foreach ( $conn->query($sql) as $fila ) 
+	echo json_encode($fila);
 	try {
             $statement = $conn->prepare($sql);
 
