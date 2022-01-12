@@ -3,7 +3,8 @@
     $conn = conectarDB();
 	$JSONData = file_get_contents("php://input");
 	$dataObject = json_decode($JSONData);
-	if (!empty($dataObject->idOrden)){
+	echo json_encode(array('conectado'=>false, 'error' => 'La clave es incorrecta, vuelva a intentarlo.'));
+/* 	if (!empty($dataObject->idOrden)){
 
 		$idOrden= $dataObject->idOrden;
 		$estado= 3;
@@ -23,6 +24,6 @@
 		}
 
 		$conn->close();
-	}
+	} */
 //fuente https://www.w3schools.com/php/php_mysql_insert.asp
 ?>
