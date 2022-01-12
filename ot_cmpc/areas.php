@@ -20,7 +20,7 @@
             exit(); // exit and close connection.
         }
 
-    $mysqli->close(); // finally, close the connection
+    $conn->close(); // finally, close the connection
 	
 	
 	
