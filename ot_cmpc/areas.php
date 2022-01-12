@@ -21,7 +21,7 @@
 				echo "no hay resultados";
 			 */
 			$result = $conn->query($sql); 
-			while ($row = $conn->query($sql)) {
+			while ($row = $result) {
 					$statsArray[] = $row;
 			}
 			echo json_encode($statsArray);
