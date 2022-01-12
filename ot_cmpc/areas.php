@@ -19,7 +19,7 @@
 		$arr2[] = array('conectado'=>false, 'error' => 'La clave es incorrecta, vuelva a intentarlo.');
 	} 
 	
-	echo json_encode($arr);
+	echo json_encode($arr2);
 	
 	try {
 /*             $statement = $conn->prepare($sql);
