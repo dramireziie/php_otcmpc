@@ -8,12 +8,12 @@
 	
 	foreach ( $conn->query($sql) as $record) {
 		$arr[] = array(
-					'idArea' => $record['idArea'];
-					'nombreArea' => $record['nombreArea'];
+					'idArea' => $record['idArea'],
+					'nombreArea' => $record['nombreArea']
 
 				); 
 		//assign each sub-array to the newly created array
-		echo json_encode($arr);
+		
 	} 
 	echo json_encode($arr);
 	
