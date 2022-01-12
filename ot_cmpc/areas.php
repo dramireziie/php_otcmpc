@@ -16,7 +16,7 @@
 
 				); 
 		//assign each sub-array to the newly created array
-		echo json_encode(array('conectado'=>false, 'error' => 'La clave es incorrecta, vuelva a intentarlo.'));
+		$arr2[] = array('conectado'=>false, 'error' => 'La clave es incorrecta, vuelva a intentarlo.');
 	} 
 	
 	echo json_encode($arr);
