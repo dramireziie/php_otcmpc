@@ -9,7 +9,7 @@
 	if (!$result)
 		printf("Errormessage: %s\n", mysqli_error($conn));
 	$rows = array();
-	while($r = mysqli_fetch_array($result)) {
+	while($r = mysqli_fetch_assoc($result)) {
 		$rows[] = $r;
 	}
 	
