@@ -15,7 +15,7 @@
 	
 	//foreach ( $conn->query($sql) as $fila ) 
 	//echo json_encode($fila);
-	printf ("algo",json_encode($r));
+	printf ("nada",json_encode($r));
 	$conn->close();
 
 ?>
