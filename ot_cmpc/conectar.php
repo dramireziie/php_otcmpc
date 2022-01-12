@@ -12,7 +12,8 @@ function conectarDB(){
 	$usuario = "root";
 	$password = "Dario031203";
 	$bd = "ot_cmpc";
-	$conexion = mysqli_connect($servidor, $usuario, $password,$bd);
+	$conexion = new mysqli($servidor, $usuario, $password,$bd);
+	//$conexion = mysqli_connect($servidor, $usuario, $password,$bd);
 	if($conexion)
 		echo "";
 	else
