@@ -11,7 +11,7 @@ function conectarDB(){
 	$bd = "ot_cmpc";
 	$conexion = mysqli_connect($servidor, $usuario, $password,$bd);
 	if($conexion)
-		echo "conectado";
+		echo "";
 	else
 		echo 'Ha sucedido un error inexperado en la conexion de la base de datos';
 	return $conexion;
