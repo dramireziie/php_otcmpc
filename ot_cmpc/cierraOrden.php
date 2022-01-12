@@ -3,7 +3,7 @@
     $conn = conectarDB();
 	//$JSONData = file_get_contents("php://input");
 	//$dataObject = json_decode($JSONData);
-	echo json_encode(array('conectado'=>false, 'error' => 'La clave es incorrecta, vuelva a intentarlo.'));
+	echo "nada";
 /* 	if (!empty($dataObject->idOrden)){
 
 		$idOrden= $dataObject->idOrden;
