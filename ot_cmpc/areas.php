@@ -8,11 +8,11 @@
 	
 	$result = $conn->query($sql);
 	$rows = array();
-	i=0;
+	$i=0;
 	while($r = $result->fetch_array()) {
-		$rows[i] = $r;
-		echo json_encode($r);
-		i++;
+		$rows[$i] = $r;
+		//echo json_encode($r);
+		$i++;
 	}
 	
 /* 	$result = mysqli_query($conn,$sql);
