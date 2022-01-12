@@ -11,12 +11,11 @@
 	$rows = array();
 	while($r = mysqli_fetch_array($result)) {
 		$rows[] = $r;
-		
 	}
 	
-	foreach ( $conn->query($sql) as $fila ) 
-	echo json_encode($fila);
-	echo json_encode($rows);
+	//foreach ( $conn->query($sql) as $fila ) 
+	//echo json_encode($fila);
+	printf ("algo",json_encode($rows));
 	$conn->close();
 
 ?>
