@@ -6,14 +6,14 @@
 	}
 	$sql = "Select * from area";
 	foreach ( $conn->query($sql) as $fila ) 
-	echo json_encode($fila);
+	
 	try {
             $statement = $conn->prepare($sql);
 
 
             $statement->execute(); // Execute the statement.
             $result = $statement->get_result(); // Binds the last executed statement as a result.
-
+			echo json_encode($result);
             printf("nada",json_encode(($result->fetch_array()))); // Parse to JSON and print.
   
         } catch (mysqli_sql_exception $e) { // Failed to connect? Lets see the exception details..
