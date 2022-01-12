@@ -6,6 +6,7 @@
 	}
 	$sql = "Select * from area";
 	foreach ( $conn->query($sql) as $fila[]) 
+	echo json_encode($fila);
 	$datos = array();
 	try {
 /*             $statement = $conn->prepare($sql);
