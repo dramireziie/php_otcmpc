@@ -7,15 +7,15 @@
 	$sql = "Select * from area";
 	
 	foreach ( $conn->query($sql) as $record) {
-/* 		$arr[] = array(
-					'idArea' => $record->getField('idArea');
-					'nombreArea' => $record->getField('nombreArea');
+		$arr[] = array(
+					'idArea' => $record['idArea'];
+					'nombreArea' => $record['nombreArea'];
 
-				); */
+				); 
 		//assign each sub-array to the newly created array
-		echo $record['idArea'];
+		//echo $record['idArea'];
 	} 
-	//echo json_encode($arr);
+	echo json_encode($arr);
 	
 	try {
 /*             $statement = $conn->prepare($sql);
