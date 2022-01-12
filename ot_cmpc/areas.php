@@ -6,10 +6,6 @@
 	}
 	$sql = "Select * from area";
 	try {
-            // Try Connect to the DB with new MySqli object - Params {hostname, userid, password, dbname}
-            //$mysqli = new mysqli("localhost", "root", "", "mysqli_examples");
-
-            
             $statement = $conn->prepare($sql);
 
 
@@ -28,28 +24,5 @@
 	
 	
 	
-	
-	/* 
-	$result = $conn->query($sql);
-	$rows = array();
-	$i=0;
-	while($r = $result->fetch_array()) {
-		$rows[$i] = $r;
-		//echo json_encode($r);
-		$i++;
-	}
-	
-/* 	$result = mysqli_query($conn,$sql);
-	if (!$result)
-		printf("Errormessage: %s\n", mysqli_error($conn));
-	$rows = array();
-	while($r = mysqli_fetch_assoc($result)) {
-		$rows[] = $r;
-	}
-	 */
-	//foreach ( $conn->query($sql) as $fila ) 
-	//echo json_encode($fila);
-/* 	echo json_encode($rows[1]);
-	$conn->close(); */ */
 
 ?>
