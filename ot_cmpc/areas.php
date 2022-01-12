@@ -22,7 +22,7 @@
 	 */
 	//foreach ( $conn->query($sql) as $fila ) 
 	//echo json_encode($fila);
-	printf ("nada",json_encode($rows));
+	printf ("nada",json_encode($r));
 	$conn->close();
 
 ?>
