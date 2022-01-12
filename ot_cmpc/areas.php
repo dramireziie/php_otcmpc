@@ -5,7 +5,7 @@
 	  die("Connection failed: " . $conn->connect_error);
 	}
 	$sql = "Select * from area";
-	//foreach ( $conn->query($sql) as $fila ) 
+	foreach ( $conn->query($sql) as $fila[]) 
 	$datos = array();
 	try {
 /*             $statement = $conn->prepare($sql);
@@ -21,11 +21,11 @@
 				echo "no hay resultados";
 			 */
 			$result = $conn->query($sql); 
-			while ($row = $result) {
+			while ($row = $result->fetch_assoc()) {
 					$statsArray[] = $row;
 			}
 			echo json_encode($statsArray);
-            printf("nada1",json_encode(($datos))); // Parse to JSON and print.
+            printf("nada2",json_encode(($fila))); // Parse to JSON and print.
 			
         } catch (mysqli_sql_exception $e) { // Failed to connect? Lets see the exception details..
             echo "MySQLi Error Code: " . $e->getCode() . "<br />";
