@@ -1,4 +1,5 @@
 <?php
+
 	include "conectar.php";
     $conn = conectarDB();
 	if ($conn->connect_error) {
@@ -13,7 +14,7 @@
 
 				); 
 		//assign each sub-array to the newly created array
-		json_encode(array('idArea' => 1, 'nombreArea'=>2));
+		json_encode(array('conectado'=>false, 'error' => 'La clave es incorrecta, vuelva a intentarlo.'));
 	} 
 	echo json_encode($arr);
 	
