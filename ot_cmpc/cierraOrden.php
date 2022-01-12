@@ -2,7 +2,7 @@
 	include "conectar.php";
     $conn = conectarDB();
 	$JSONData = file_get_contents("php://input");
-	$dataObject = json_decode($JSONData);
+	//$dataObject = json_decode($JSONData);
 	echo json_encode(array('conectado'=>false, 'error' => 'La clave es incorrecta, vuelva a intentarlo.'));
 /* 	if (!empty($dataObject->idOrden)){
 
