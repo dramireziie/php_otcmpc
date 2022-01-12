@@ -8,7 +8,7 @@
 	
 	$result = $conn->query($sql);
 	$rows = array();
-	while($r = $conn->fetch_array($result)) {
+	while($r = $conn->fetch_assoc($result)) {
 		$rows[] = $r;
 	}
 	
