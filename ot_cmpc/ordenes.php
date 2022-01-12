@@ -4,10 +4,11 @@
 	if ($conn->connect_error) {
 	  die("Connection failed: " . $conn->connect_error);
 	}
-	$estado = $_GET['estado'];
 	$wh = '';
-	if (isset($estado))
+	if (isset($_GET['estado'])){
+		$estado = $_GET['estado'];
 		$wh =  "WHERE estado = ".$estado;
+	}
 	$sql = "SELECT idOrden, fechaSolicitud,fechaInicio, fechaTermino, u.nombre,
 		actividad, criticidad, e.descrip as estado, descripcion, observaciones,conformidad,
 		nombreArea as area
