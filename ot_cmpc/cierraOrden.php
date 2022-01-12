@@ -1,4 +1,5 @@
 <?php
+include "core.php";
 header('Access-Control-Allow-Origin: *');
 $method = $_SERVER['REQUEST_METHOD'];
 $output = json_encode(['status' => 'recieved']);
