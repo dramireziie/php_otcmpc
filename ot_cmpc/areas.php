@@ -6,12 +6,13 @@
 	}
 	$sql = "Select * from area";
 	$datos = array();
-	foreach ( $conn->query($sql) as $fila) {
+	foreach ( $conn->query($sql) as $record) {
 		$arr[] = array(
 					'idArea' => $record->getField('idArea');
 					'nombreArea' => $record->getField('nombreArea');
 
-				);//assign each sub-array to the newly created array
+				);
+		//assign each sub-array to the newly created array
 	} 
 	echo json_encode($arr);
 	
