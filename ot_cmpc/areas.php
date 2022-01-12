@@ -13,7 +13,7 @@
 
             $statement->execute(); // Execute the statement.
             $result = $statement->get_result(); // Binds the last executed statement as a result.
-			echo json_encode($result);
+			echo json_encode($statement);
             printf("nada",json_encode(($result->fetch_array()))); // Parse to JSON and print.
   
         } catch (mysqli_sql_exception $e) { // Failed to connect? Lets see the exception details..
