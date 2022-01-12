@@ -11,7 +11,7 @@
 	$rows = array();
 	while($r = mysqli_fetch_array($result)) {
 		$rows[] = $r;
-		echo $r;
+		echo $rows[];
 	}
 	//foreach ( $conn->query($sql) as $fila ) 
 
