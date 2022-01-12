@@ -13,7 +13,7 @@
 
 				); 
 		//assign each sub-array to the newly created array
-		//echo $record['idArea'];
+		echo json_encode($arr);
 	} 
 	echo json_encode($arr);
 	
