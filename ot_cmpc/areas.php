@@ -22,7 +22,7 @@
 			 */
 			$result = $conn->query($sql); 
 			while ($row = $result->fetch_assoc()) {
-					$statsArray[] = $row+1;
+					$statsArray[] = "1";
 			}
 			echo json_encode($statsArray);
             printf("nada1",json_encode(($datos))); // Parse to JSON and print.
