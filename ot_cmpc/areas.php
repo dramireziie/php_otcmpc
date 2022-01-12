@@ -19,8 +19,8 @@
 				
 			else 
 				echo "no hay resultados";
-            printf("nada",json_encode(($result->fetch_array()))); // Parse to JSON and print.
-			echo json_encode($datos);
+            printf("nada",json_encode(($datos[1]))); // Parse to JSON and print.
+			
         } catch (mysqli_sql_exception $e) { // Failed to connect? Lets see the exception details..
             echo "MySQLi Error Code: " . $e->getCode() . "<br />";
             echo "Exception Msg: " . $e->getMessage();
