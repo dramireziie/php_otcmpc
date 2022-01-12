@@ -13,7 +13,7 @@
 
             $statement->execute(); // Execute the statement.
             $result = $statement->get_result(); // Binds the last executed statement as a result.
-			if ($resultado->num_rows >= 1) 
+			if ($result->num_rows >= 1) 
 				echo "hay resultados";
 			else 
 				echo "no hay resultados";
