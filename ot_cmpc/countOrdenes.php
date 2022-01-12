@@ -4,10 +4,12 @@
 	if ($conn->connect_error) {
 	  die("Connection failed: " . $conn->connect_error);
 	}
-	$estado = $_GET['estado'];
+	
 	$wh = '';
-	if (isset($estado))
+	if (isset($_GET['estado'])){
+		$estado = $_GET['estado'];
 		$wh =  "WHERE estado = ".$estado;
+	}	
 	$sql = "SELECT nombreArea as area,count(*) as count
 		FROM ordentrabajo AS o
 		INNER JOIN servicio AS s ON o.idServicio=s.idServicio
