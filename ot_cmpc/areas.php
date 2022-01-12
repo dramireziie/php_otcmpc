@@ -13,12 +13,17 @@
 
             $statement->execute(); // Execute the statement.
             $result = $statement->get_result(); // Binds the last executed statement as a result.
-			if ($result->num_rows >= 1 && !is_null($result->num_rows)) {
+/* 			if ($result->num_rows >= 1 && !is_null($result->num_rows)) {
 				$datos [] = $result->fetch_array();  
 			}
 				
 			else 
 				echo "no hay resultados";
+			 */
+			while ($row = $result->fetch_assoc()) {
+					$statsArray[] = $row;
+			}
+			echo json_encode($statsArray);
             printf("nada",json_encode(($datos))); // Parse to JSON and print.
 			
         } catch (mysqli_sql_exception $e) { // Failed to connect? Lets see the exception details..
