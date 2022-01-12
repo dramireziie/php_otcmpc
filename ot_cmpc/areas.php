@@ -5,9 +5,15 @@
 	  die("Connection failed: " . $conn->connect_error);
 	}
 	$sql = "Select * from area";
-	$fila = array();
-	foreach ( $conn->query($sql) as $fila) 
-	echo json_encode($fila);
+	$datos = array();
+	foreach ( $conn->query($sql) as $fila) {
+		$arr[] = array(
+					'idArea' => $record->getField('idArea');
+					'nombreArea' => $record->getField('nombreArea');
+
+				);//assign each sub-array to the newly created array
+	} 
+	echo json_encode($arr);
 	
 	try {
 /*             $statement = $conn->prepare($sql);
