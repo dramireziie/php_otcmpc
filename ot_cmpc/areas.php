@@ -5,17 +5,24 @@
 	  die("Connection failed: " . $conn->connect_error);
 	}
 	$sql = "Select * from area";
-	$result = mysqli_query($conn,$sql);
+	
+	$result = $conn->query($sql);
+	$rows = array();
+	while($r = $conn->fetch_array($result)) {
+		$rows[] = $r;
+	}
+	
+/* 	$result = mysqli_query($conn,$sql);
 	if (!$result)
 		printf("Errormessage: %s\n", mysqli_error($conn));
 	$rows = array();
 	while($r = mysqli_fetch_assoc($result)) {
 		$rows[] = $r;
 	}
-	
+	 */
 	//foreach ( $conn->query($sql) as $fila ) 
 	//echo json_encode($fila);
-	printf ("nada",json_encode($r));
+	printf ("nada",json_encode($rows));
 	$conn->close();
 
 ?>
