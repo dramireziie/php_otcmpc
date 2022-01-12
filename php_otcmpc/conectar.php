@@ -4,7 +4,6 @@ header("Access-Control-Allow-Headers: X-API-KEY, Origin, X-Requested-With, Conte
 header("Content-Type: text/html; charset=utf-8");
 require_once('connect.php');
 $method = $_SERVER['REQUEST_METHOD'];
-
 function conectarDB(){
 	$servidor = "localhost";
 	$usuario = "root";
@@ -17,7 +16,6 @@ function conectarDB(){
 	else{
 		echo 'Ha sucedido un error inexperado en la conexion de la base de datos';
 	}
-
 	return $conexion;
 }
 ?>
