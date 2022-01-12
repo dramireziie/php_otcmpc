@@ -1,9 +1,28 @@
 <?php
-	include "conectar.php";
+// Allow from any origin
+if (isset($_SERVER['HTTP_ORIGIN'])) {
+    header("Access-Control-Allow-Origin: {$_SERVER['HTTP_ORIGIN']}");
+    header('Access-Control-Allow-Credentials: true');
+    header("Cache-Control: no-cache");
+}
+// Access-Control headers are received during OPTIONS requests
+if ($_SERVER['REQUEST_METHOD'] == 'OPTIONS') {
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_METHOD']))
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+    if (isset($_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']))
+        header("Access-Control-Allow-Headers: {$_SERVER['HTTP_ACCESS_CONTROL_REQUEST_HEADERS']}");
+    exit(0);
+}
+$output = json_encode(['status' => 'recieved']);
+header('Content-Length: '.strlen($output));
+header('Content-Type: application/json');
+echo $output;
+exit;
+/* 	include "conectar.php";
     $conn = conectarDB();
 	//$JSONData = file_get_contents("php://input");
 	//$dataObject = json_decode($JSONData);
-	echo "nada";
+	echo "nada"; */
 /* 	if (!empty($dataObject->idOrden)){
 
 		$idOrden= $dataObject->idOrden;
