@@ -21,8 +21,8 @@
 				echo "no hay resultados";
 			 */
 			$result = $conn->query($sql); 
-			while ($row = $result->fetch_assoc()) {
-					$statsArray[] = "1";
+			while ($row = $conn->query($sql)) {
+					$statsArray[] = $row;
 			}
 			echo json_encode($statsArray);
             printf("nada1",json_encode(($datos))); // Parse to JSON and print.
