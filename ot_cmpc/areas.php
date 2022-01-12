@@ -10,6 +10,7 @@
 	$rows = array();
 	while($r = $result->fetch_array()) {
 		$rows[] = $r;
+		echo json_encode($r);
 	}
 	
 /* 	$result = mysqli_query($conn,$sql);
