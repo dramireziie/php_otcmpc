@@ -6,19 +6,21 @@
 	}
 	$sql = "Select * from area";
 	//foreach ( $conn->query($sql) as $fila ) 
-	
+	$datos = array();
 	try {
             $statement = $conn->prepare($sql);
 
 
             $statement->execute(); // Execute the statement.
             $result = $statement->get_result(); // Binds the last executed statement as a result.
-			if ($result->num_rows >= 1 && !is_null($result->num_rows)) 
-				echo json_encode($result->fetch_assoc());
+			if ($result->num_rows >= 1 && !is_null($result->num_rows)) {
+				$datos [] = $result->fetch_array();  
+			}
+				
 			else 
 				echo "no hay resultados";
             printf("nada",json_encode(($result->fetch_array()))); // Parse to JSON and print.
-  
+			echo json_encode($datos);
         } catch (mysqli_sql_exception $e) { // Failed to connect? Lets see the exception details..
             echo "MySQLi Error Code: " . $e->getCode() . "<br />";
             echo "Exception Msg: " . $e->getMessage();
