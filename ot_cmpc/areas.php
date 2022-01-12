@@ -6,7 +6,8 @@
 	}
 	$sql = "Select * from area";
 	$result = mysqli_query($conn,$sql);
-	printf("Errormessage: %s\n", mysqli_error($conn));
+	if (!$result)
+		printf("Errormessage: %s\n", mysqli_error($conn));
 	$rows = array();
 	while($r = mysqli_fetch_array($result)) {
 		$rows[] = $r;
