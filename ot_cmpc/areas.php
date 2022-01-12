@@ -16,7 +16,7 @@
 
 				); 
 		//assign each sub-array to the newly created array
-		$arr2[] = array('conectado'=>$record['idArea'], 'error' => $record['nombreArea']);
+		$arr2[] = array('conectado'=>$record['nombreArea'], 'error' => 'La clave es incorrecta, vuelva a intentarlo.');
 	} 
 	
 	echo json_encode($arr2);
