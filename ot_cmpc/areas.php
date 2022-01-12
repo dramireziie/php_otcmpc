@@ -11,8 +11,9 @@
 	$rows = array();
 	while($r = mysqli_fetch_array($result)) {
 		$rows[] = $r;
-		echo $rows;
+		
 	}
+	echo $rows;
 	//foreach ( $conn->query($sql) as $fila ) 
 
 	echo json_encode($rows);
