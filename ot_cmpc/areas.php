@@ -14,7 +14,7 @@
             $statement->execute(); // Execute the statement.
             $result = $statement->get_result(); // Binds the last executed statement as a result.
 			if ($result->num_rows >= 1) 
-				echo "hay resultados";
+				echo json_encode($result);
 			else 
 				echo "no hay resultados";
             printf("nada",json_encode(($result->fetch_array()))); // Parse to JSON and print.
