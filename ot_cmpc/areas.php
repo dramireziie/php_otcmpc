@@ -14,6 +14,9 @@
 		
 	}
 	echo $rows;
+	foreach ($rows as $value) {
+		echo $value, "\n";
+	}
 	//foreach ( $conn->query($sql) as $fila ) 
 
 	echo json_encode($rows);
