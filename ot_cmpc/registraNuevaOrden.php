@@ -4,7 +4,7 @@
 	$JSONData = file_get_contents("php://input");
 	$dataObject = json_decode($JSONData);
 	if (!empty($dataObject->fecha)){
-		//echo $dataObject->name;	
+		echo $dataObject->name;	
 		$fechaSolicitud= $dataObject->fecha;
 		$idServicio= $dataObject->servicio;
 		$descripcion= $dataObject->observaciones;
