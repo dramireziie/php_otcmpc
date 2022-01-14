@@ -13,21 +13,20 @@ if (!empty($dataObject->idOrden)){
 	$idOrden= $dataObject->idOrden;
 	$estado= 3;
 	$conformidad = true;
-	if ($conn->connect_error) {
+	if ($conn->connect_error) 
 	  die("Connection failed: " . $conn->connect_error);
-	}
+	
 
 	$sql = " UPDATE ordentrabajo SET estado = '$estado', conformidad = '$conformidad' 
 			WHERE idOrden = '$idOrden' ";
 
-	if ($conn->query($sql) === TRUE) {
-			
+	if ($conn->query($sql) === TRUE)			
 	  echo json_encode(array('actualizado'=>true, 'msg' => 'Orden cerrada con éxito!'));
-	} else {
+	else 
 	  echo json_encode(array('actualizado'=>false, 'msg' => 'Error al cerrar la Orden, vuelva a intentar ', 'error'=> $conn->error));
-	}
+	
 
 	$conn->close();
 } 
- */
+
 ?>
